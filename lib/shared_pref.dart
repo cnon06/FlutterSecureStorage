@@ -69,7 +69,7 @@ class _SharedPrefState extends State<SharedPref> {
                     colors: _selectedColors,
                     isStudent: _switchState));
               },
-              child: const Text("Kaydet"))
+              child: const Text("Save"))
         ],
       ),
     );
