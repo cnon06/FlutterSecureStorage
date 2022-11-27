@@ -7,7 +7,7 @@ import 'package:storage/models/user_info.dart';
 
 class SharedPreferencService {
   saveDatas(UserInfo userInfo) async {
-    final flutterSecureStorage = FlutterSecureStorage();
+    const flutterSecureStorage = FlutterSecureStorage();
     await flutterSecureStorage.write(key: "name", value: userInfo.name);
     await flutterSecureStorage.write(
         key: "gender", value: userInfo.gender.toString());
@@ -21,7 +21,7 @@ class SharedPreferencService {
   }
 
   Future<UserInfo> getDatas() async {
-    final preferences = FlutterSecureStorage();
+    const preferences = FlutterSecureStorage();
 
     final name = await preferences.read(key: "name") ?? "";
     final genderIndex = int.parse(await preferences.read(key: "gender") ?? "0");
